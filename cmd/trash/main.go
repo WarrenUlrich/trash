@@ -31,20 +31,7 @@ Commands:
 
 	empty                  Permanently delete all files and directories from the trash.
 		-c, --confirm      Ask for confirmation before emptying the trash.
-		-v, --verbose      Output filenames while deleting them.
-
-Examples:
-	# Move and compress a file to trash
-	trash put -z myfile.txt
-
-	# Move and compress a directory to trash
-	trash put -rz mydirectory
-
-	# Restore and uncompress a file from trash
-	trash restore -u myfile.txt.gz
-	
-	# Restore and uncompress a directory from trash
-	trash restore -ru mydirectory.tar.gz`
+		-v, --verbose      Output filenames while deleting them.`
 
 	versionMessage = "trash version 1.0.0"
 )
@@ -82,7 +69,7 @@ func list(args []string) error {
 	}
 
 	for _, info := range infos {
-		fmt.Println(info)
+		fmt.Printf("%s %s\n", info.DeletionDate, info.OriginPath)
 	}
 
 	return nil
