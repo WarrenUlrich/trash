@@ -42,7 +42,7 @@ Before you start, make sure you have Go installed on your system. You can downlo
 3. Build the application:
 
    ```sh
-   go build
+   go build ./cmd/trash
    ```
 
 4. Optionally, move the built binary to a directory in your `PATH` for easier access:
@@ -53,10 +53,10 @@ Before you start, make sure you have Go installed on your system. You can downlo
 
 #### Installing Using `go install`
 
-If you prefer not to clone the repository and build from source, you can use `go install` to download and install GoTrash directly:
+If you prefer not to clone the repository and build from source, you can use `go install` to download and install Trash directly:
 
 ```sh
-go install github.com/warrenulrich/trash@latest
+go install github.com/warrenulrich/trash/cmd/trash@latest
 ```
 
 This command downloads, builds, and installs the package in your `GOPATH`. If the `GOPATH` is in your system `PATH`, you should be able to run the `trash` command from anywhere.
@@ -66,7 +66,7 @@ This command downloads, builds, and installs the package in your `GOPATH`. If th
 Trash can be used through the command line with the following syntax:
 
 ```
-usage: trash [options] <file/directory>
+usage: trash [command] [options] <file/directory>
 
 Options:
     -h, --help          Show help message and exit.
