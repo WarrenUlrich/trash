@@ -33,7 +33,7 @@ Commands:
 		-c, --confirm      Ask for confirmation before emptying the trash.
 		-v, --verbose      Output filenames while deleting them.`
 
-	versionMessage = "trash version 1.0.0"
+	versionMessage = "trash version 0.0.1"
 )
 
 func put(args []string) error {
